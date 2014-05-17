@@ -1,0 +1,7 @@
+<h1>Hello, <%= @coach.email %></h1>
+<h3>Upcoming Meets</h3>
+<ul>
+  <% @meets.each do |meet| %>
+    <li><a href="<%= meet_url(meet) %>"><%= meet.meet_name %></a>: <time><%= meet.meet_date %></time></li>
+  <% end %>
+</ul>

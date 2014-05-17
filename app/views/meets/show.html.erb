@@ -1,0 +1,23 @@
+<h1><%= @meet.meet_name %></h1>
+
+<form action="<%= meet_url(@meet) %>" method="post">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="patch">
+  <table>
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><input type="text" name="meet[swimmer][first_name]" value=""></td>
+        <td><input type="text" name="meet[swimmer][last_name]" value=""></td>
+      </tr>  
+    </tbody>
+
+  </table>
+  <div class="submit">
+    <input type="submit" value="Create Entries">
+  </div>
+</form>
